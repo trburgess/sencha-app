@@ -20,6 +20,8 @@ Ext.define('TutorialApp.view.login.LoginController', {
       Ext.create({
         xtype: 'app-main'
       });
+
+      Ext.Msg.alert('Hello', 'Welcome back <b>' + foundUser.get('id') + '</b>');
     }
   },
 
