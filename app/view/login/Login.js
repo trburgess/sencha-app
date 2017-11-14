@@ -4,10 +4,12 @@ Ext.define('TutorialApp.view.login.Login', {
 
   requires: [
     'TutorialApp.view.login.LoginController',
+    'TutorialApp.view.login.LoginModel',
     'Ext.form.Panel'
   ],
 
   controller: 'login',
+  viewModel: 'login',
   bodyPadding: 10,
   title: 'Login Window',
   closable: false,
@@ -18,12 +20,18 @@ Ext.define('TutorialApp.view.login.Login', {
     reference: 'form',
     items: [{
       xtype: 'textfield',
-      name: 'username',
+      name: 'identity',
+      bind: {
+        value: '{identity}'
+      },
       fieldLabel: 'Username',
       allowBlank: false
     }, {
       xtype: 'textfield',
-      name: 'password',
+      name: 'credential',
+      bind: {
+        value: '{credential}'
+      },
       inputType: 'password',
       fieldLabel: 'Password',
       allowBlank: false
