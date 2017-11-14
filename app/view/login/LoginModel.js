@@ -7,7 +7,7 @@ Ext.define('TutorialApp.view.login.LoginModel', {
   alias: 'viewmodel.login',
 
   data: {
-    identity: 'tom_test',
+    identity: ['ashley', 'tom', 'theo'][Math.floor(Math.random() * (3))],
     credential: 'password'
   },
 
