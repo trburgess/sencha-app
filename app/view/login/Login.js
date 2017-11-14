@@ -30,7 +30,11 @@ Ext.define('TutorialApp.view.login.Login', {
     }, {
       xtype: 'displayfield',
       hideEmptyLabel: false,
-      value: 'Enter any non-blank password'
+      value: 'Username `tom_test`'
+    }, {
+      xtype: 'displayfield',
+      hideEmptyLabel: false,
+      value: 'Password `password`'
     }],
     buttons: [{
       text: 'Login',
