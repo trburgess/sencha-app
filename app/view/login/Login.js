@@ -11,7 +11,7 @@ Ext.define('TutorialApp.view.login.Login', {
   controller: 'login',
   viewModel: 'login',
   bodyPadding: 10,
-  title: 'Login Window',
+  title: 'Please Login',
   closable: false,
   autoShow: true,
 
