@@ -9,7 +9,7 @@ Ext.define('TutorialApp.Application', {
   name: 'TutorialApp',
 
   stores: [
-    // TODO: add global / shared stores here
+    'User'
   ],
 
   launch: function () {
@@ -20,7 +20,6 @@ Ext.define('TutorialApp.Application', {
 
     // Check to see the current value of the localStorage key
     loggedIn = localStorage.getItem("TutorialLoggedIn");
-
     // This ternary operator determines the value of the TutorialLoggedIn key.
     // If TutorialLoggedIn isn't true, we display the login window,
     // otherwise, we display the main view
