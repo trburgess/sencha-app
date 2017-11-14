@@ -7,7 +7,10 @@ Ext.define('TutorialApp.store.User', {
 
   data: {
     items: [
-      {username: 'tom_test', password: "password"}
+      {
+        id: 'tom_test',
+        credential: 'password'
+      }
     ]
   },
 
