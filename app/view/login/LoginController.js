@@ -2,6 +2,7 @@ Ext.define('TutorialApp.view.login.LoginController', {
   extend: 'Ext.app.ViewController',
   alias: 'controller.login',
 
+  // Called when login is clicked
   onLoginClick: function () {
     var viewModel = this.getViewModel();
     var foundUser = viewModel.getStore('User').getById(
@@ -22,16 +23,13 @@ Ext.define('TutorialApp.view.login.LoginController', {
     }
   },
 
+  // Validate the user
   _validateUser: function (foundUser, credential) {
     if (!foundUser || foundUser.get('credential') !== credential) {
-      this._failedValidationMessage();
+      Ext.Msg.alert('Validation Failed', 'Invalid credentials');
       return false;
     }
 
     return true;
-  },
-
-  _failedValidationMessage: function () {
-    Ext.Msg.alert('Validation Failed', 'Invalid credentials');
   }
 });
